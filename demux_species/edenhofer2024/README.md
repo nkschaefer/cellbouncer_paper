@@ -14,6 +14,7 @@ Output:
 
 #### To run
 ```
+export CELLBOUNCER="/path/to/cellbouncer"
 ./make_index.sh
 ./run_demux_species.sh
 ```

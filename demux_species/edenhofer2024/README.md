@@ -11,3 +11,9 @@ Output:
 * a PNG and PDF plot showing concordance of sgRNA-based IDs (Y) and demux_species k-mer-based IDs (X)
 
 * a file (precision_recall.txt) storing the precision and recall of demux_species assignments treating the sgRNA-based assignments as truth
+
+#### To run
+```
+./make_index.sh
+./run_demux_species.sh
+```

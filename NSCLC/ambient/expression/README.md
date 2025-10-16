@@ -1,7 +1,12 @@
 ## Analyses related to contamination rates & gene expression profiles of ambient RNA
 
 Before running, first download the NSLC data raw and filtered gene expression matrices
-( in MEX format, not as h5 files ). For links, see parent directory.
+(in MEX format, not as h5 files). For links, see two directories up (`NSCLC` directory).
+
+Tell scripts where to find CellBouncer
+```
+export CELLBOUNCER="/path/to/cellbouncer"
+```
 
 Also download a human cellranger reference, and unpack it. 
 

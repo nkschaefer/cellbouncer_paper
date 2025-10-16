@@ -6,4 +6,7 @@ IMPORTANT: run everything else first:
 * `../ambient`
 * `../tags`
 
-
+Then:
+```
+./run_everything.sh
+```

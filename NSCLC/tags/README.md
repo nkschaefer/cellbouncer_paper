@@ -10,6 +10,11 @@ This should create these directories, within this directory:
 40k_NSCLC_DTC_3p_HT_nextgem_cmo_3_fastqs
 ```
 
+Tell scripts where to find CellBouncer
+```
+export CELLBOUNCER="/path/to/cellbouncer"
+```
+
 Then:
 ```
 ./run_everything.sh [/path/to/cellranger/barcode_whitelist]

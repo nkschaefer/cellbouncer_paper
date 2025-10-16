@@ -7,6 +7,11 @@ Edit scripts in this directory to change conda paths to wherever you
 have installed conda (and whatever conda env names you install these
 programs' environments under)
 
+Tell scripts where to find CellBouncer
+```
+export CELLBOUNCER="/path/to/cellbouncer"
+```
+
 ### CellBouncer:
 ```
 ${CELLBOUNCER}/demux_mt -b ../40k_all.bam -o demux_mt -c 

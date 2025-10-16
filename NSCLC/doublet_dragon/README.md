@@ -6,6 +6,11 @@ IMPORTANT: run everything else first:
 * `../ambient`
 * `../tags`
 
+Tell scripts where to find CellBouncer
+```
+export CELLBOUNCER="/path/to/cellbouncer"
+```
+
 Then:
 ```
 ./run_everything.sh

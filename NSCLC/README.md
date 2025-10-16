@@ -2,6 +2,11 @@
 
 Get data from here: https://www.10xgenomics.com/datasets/40-k-mixture-of-nsclc-dt-cs-from-7-donors-3-ht-v-3-1-3-1-high-6-1-0
 
+Tell scripts where to find CellBouncer
+```
+export CELLBOUNCER="/path/to/cellbouncer"
+```
+
 Run `./get_data.sh` to merge BAMs, call variants, and downsample data as needed to run tests
 
 ### Genotype-based demultiplexing trials

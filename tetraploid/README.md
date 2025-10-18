@@ -21,7 +21,7 @@ Obtain WGS data from SRA for the following cell lines:
 | H29089 | Human | 
 | CongoA4B | Bonobo |
 
-Align and variant call (see [pipeline on GitHub](https://github.com/nkschaefer/align_pipelines)
+Align and variant call (see [pipeline on GitHub](https://github.com/nkschaefer/align_pipelines))
 
 Filter resulting VCF: 
 ```

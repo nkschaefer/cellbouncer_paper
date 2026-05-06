@@ -34,10 +34,10 @@ cd ..
 # Print counts for cells with >= 10 sgRNA reads to a table in the format recognized by
 # demux_species
 mkdir edenhofer2024_demux_species
-./refmt_sgrna_data.py > edenhofer2024_demux_species
-echo -e "0\tHuman" > edenhofer2024_demux_species
-echo -e "1\tMacaque" >> edenhofer2024_demux_species
-echo -e "2\tBoth" >> edenhofer2024_demux_species
+./refmt_sgrna_data.py > edenhofer2024_demux_species/species_counts.txt
+echo -e "0\tHuman" > edenhofer2024_demux_species/species_names.txt
+echo -e "1\tMacaque" >> edenhofer2024_demux_species/species_names.txt
+echo -e "2\tBoth" >> edenhofer2024_demux_species/species_names.txt
 
 # Run demux_species to assign species identity to Edenhofer 2024 data from tag counts
 ${CELLBOUNCER}/demux_species -o edenhofer2024_demux_species -d

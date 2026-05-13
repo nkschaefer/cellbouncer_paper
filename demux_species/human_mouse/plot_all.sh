@@ -2,6 +2,7 @@
 
 ./compile_mprof.sh
 ./make_plot_index.R
+./make_plot_index_inset.R
 ./make_plot.R
 ./plot_bars.R
 

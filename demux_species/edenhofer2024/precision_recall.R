@@ -22,3 +22,31 @@ f1 <- (2*precision*recall)/(precision + recall)
 df <- data.frame(precision=precision, recall=recall, f1=f1)
 write.table(df, sep='\t', quote=FALSE, row.names=FALSE, col.names=TRUE)
 
+counts <- read.table('edenhofer2024_demux_species/species_counts.txt')
+colnames(counts) <- c("bc", "Human", "Macaque", "Both")
+
+rownames(counts) <- counts$bc
+counts <- counts[,-c(1)]
+counts <- as.matrix(counts)
+counts <- counts[which(rowSums(counts) > 10),]
+counts <- counts / rowSums(counts)
+
+library(pheatmap)
+library(viridis)
+
+meta <- data.frame(row.names=a1$bc, species=a1$id)
+
+cols <- c("#FE4A49", "#2AB7CA", "#FED766")
+cols <- setNames(cols, c("Human", "Macaque", "Human+Macaque"))
+cols <- list(species=cols)
+
+pdf("edenhofer_species_heatmap.pdf", bg='white', height=3.5, width=6)
+pheatmap(counts, 
+         cluster_cols=FALSE, 
+         show_rownames=FALSE, 
+         annotation_row=meta, 
+         annotation_colors=cols,
+         breaks=seq(0,1, 0.01), 
+         color=viridis(100, option='mako'))
+dev.off()
+

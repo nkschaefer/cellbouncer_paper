@@ -13,14 +13,14 @@ nbc <- 5000
 expec <- data.frame(species=c("Human", "Mouse", "Human+Mouse"), count=c(nbc*0.96*0.5, nbc*0.96*0.5, nbc*0.04))
 expec$type <- "Expected"
 
-k22 <- read.table('kmer_22_cellbouncer/species.assignments')
-k22 <- k22[which(k22$V1 %in% bc$bc),]
-k22 <- k22[,c(1,2)]
-colnames(k22) <- c("bc", "species")
-k22$count <- 1
-k22agg <- aggregate(k22$count, by=list(species=k22$species), FUN=sum)
-colnames(k22agg)[2] <- "count"
-k22agg$type <- "kmer"
+k32 <- read.table('kmer_32_cellbouncer/species.assignments')
+k32 <- k32[which(k32$V1 %in% bc$bc),]
+k32 <- k32[,c(1,2)]
+colnames(k32) <- c("bc", "species")
+k32$count <- 1
+k32agg <- aggregate(k32$count, by=list(species=k32$species), FUN=sum)
+colnames(k32agg)[2] <- "count"
+k32agg$type <- "kmer"
 
 frombam <- read.table('demux_species_composite/species.assignments')
 frombam <- frombam[which(frombam$V1 %in% bc$bc),]
@@ -38,7 +38,7 @@ bcagg <- aggregate(bc$count, by=list(species=bc$species), FUN=sum)
 colnames(bcagg)[2] <- "count"
 bcagg$type <- "10X"
 
-all <- rbind(expec, k22agg, frombamagg, bcagg)
+all <- rbind(expec, k32agg, frombamagg, bcagg)
 
 for (t in unique(all$type)){
     all[which(all$type==t),]$count <- all[which(all$type==t),]$count / sum(all[which(all$type==t),]$count)

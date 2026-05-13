@@ -30,5 +30,5 @@ plt <- ggplot(dat2) +
           axis.title.y=element_text(size=14))
 
 pltname = "mem_run.pdf"
-ggsave(plt, file=pltname, width=8, height=5)
+ggsave(plt, file=pltname, width=8, height=3)
 
